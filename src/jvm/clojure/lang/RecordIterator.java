@@ -22,7 +22,7 @@ public final class RecordIterator implements Iterator {
     final IPersistentVector basefields;
     final Iterator extmap;
 
-    public RecordIterator (ILookup rec, IPersistentVector basefields, Iterator extmap) {
+    public RecordIterator(ILookup rec, IPersistentVector basefields, Iterator extmap) {
         this.rec = rec;
         this.basefields = basefields;
         this.basecnt = basefields.count();
@@ -42,7 +42,7 @@ public final class RecordIterator implements Iterator {
             Object k = basefields.nth(i);
             i++;
             return MapEntry.create(k, rec.valAt(k));
-        } else  {
+        } else {
             return extmap.next();
         }
     }

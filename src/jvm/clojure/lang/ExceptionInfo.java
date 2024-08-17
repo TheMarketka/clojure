@@ -28,7 +28,7 @@ public class ExceptionInfo extends RuntimeException implements IExceptionInfo {
     public ExceptionInfo(String s, IPersistentMap data, Throwable throwable) {
         // null cause is equivalent to not passing a cause
         super(s, throwable);
-        this.data = (data == null) ? PersistentArrayMap.EMPTY: data;
+        this.data = (data == null) ? PersistentArrayMap.EMPTY : data;
     }
 
     public IPersistentMap getData() {
